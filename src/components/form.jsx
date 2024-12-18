@@ -1,10 +1,26 @@
 // FormComponent.jsx
 import { useState } from 'react';
 import axios from 'axios';
+import Swal from "sweetalert2";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './../css/form.css';
 
 const FormComponent = () => {
+
+
+
+  const handleUpdateProduct = () => {
+    // Supón que aquí va la lógica para actualizar el producto...
+
+    // Después de actualizar el producto, muestras el SweetAlert
+    Swal.fire({
+      title: 'Producto pedido',
+      text: 'El pedido ha sido enviado existosamente.',
+      icon: 'success',
+      confirmButtonText: 'Aceptar',
+    });
+  };
+
   const [formData, setFormData] = useState({
     nombre_completo: '',
     telefono: '',
@@ -35,7 +51,8 @@ const FormComponent = () => {
         subtotal: 0,
         total: 0
       });
-      alert('Pedido guardado exitosamente');
+      {handleUpdateProduct()}
+
     } catch (error) {
       console.error('Error al guardar el pedido:', error);
       alert('Error al guardar el pedido');
@@ -43,7 +60,7 @@ const FormComponent = () => {
   };
 
   return (
-    <div className="container py-5">
+    <div className="container py-2">
       <div className="row justify-content-center">
         <div className="col-12 col-md-12 col-lg-12">
           <div className="formulario-container">
@@ -137,9 +154,11 @@ const FormComponent = () => {
                 </div>
               </div>
 
-              <button type="submit" className="btn btn-primary w-100 mt-3">
+              <button type="submit" className="btn btn-primary w-100 mt-3" >
                 Enviar Pedido
               </button>
+              
+
             </form>
           </div>
         </div>
