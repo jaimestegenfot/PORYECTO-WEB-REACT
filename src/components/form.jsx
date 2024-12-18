@@ -57,7 +57,7 @@ const FormComponent = () => {
   };
 
   return (
-    <div className="container py-2">
+    <div className="container py-5">
       <div className="row justify-content-center">
         <div className="col-12 col-md-12 col-lg-12">
           <div className="formulario-container">
