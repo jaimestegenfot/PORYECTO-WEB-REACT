@@ -3,6 +3,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/navegation';
 import FormComponent from './components/form';
+import Login from './view/login';
 
 
 
@@ -13,7 +14,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<FormComponent />} />
-        
+        <Route path="/login" element={<Login />} />
 
       </Routes>
     </Router>

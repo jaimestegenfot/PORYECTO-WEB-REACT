@@ -3,10 +3,17 @@
     width: 50px;
 }
 
-.Navbar__link{
-    text-decoration: none;
+.nav-link{
+   
     font-weight: bold;
     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+.nav-link svg{
+    font-size: 40px;
+}
+.nav-link:hover {
+    color: rgb(125, 139, 0) !important;
 }
 
