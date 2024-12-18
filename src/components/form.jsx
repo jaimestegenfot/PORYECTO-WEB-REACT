@@ -9,10 +9,7 @@ const FormComponent = () => {
 
 
 
-  const handleUpdateProduct = () => {
-    // Supón que aquí va la lógica para actualizar el producto...
-
-    // Después de actualizar el producto, muestras el SweetAlert
+  const handleenviar = () => {
     Swal.fire({
       title: 'Producto pedido',
       text: 'El pedido ha sido enviado existosamente.',
@@ -51,7 +48,7 @@ const FormComponent = () => {
         subtotal: 0,
         total: 0
       });
-      {handleUpdateProduct()}
+      handleenviar();
 
     } catch (error) {
       console.error('Error al guardar el pedido:', error);
