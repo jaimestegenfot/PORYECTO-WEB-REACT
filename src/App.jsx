@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<FormComponent />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/pedidos" element={<ListPedidos />} />
+        
         <Route path="/inicio" element={<Home />} />
         <Route path="/historia" element={<Historia />} />
         <Route path="/carta" element={<Carta />} />

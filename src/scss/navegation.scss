@@ -10,7 +10,7 @@
         height: 50px;
     }
     .Navbar__links{
-        a{
+        .nav-link{
             text-decoration: none;
             color: rgb(194, 195, 158);
             font-size: 20px;
@@ -30,8 +30,11 @@
         background-size: 100% 100%;
         background-position: left;
     }
-    .Navbar__links a:active{
-        background-size: 100% 100%;
-        background-position: left;
+    
+    #login{
+        
+        padding: 5px 15px;
+        
+        font-size: 30px;
     }
 }
