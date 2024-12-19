@@ -29,6 +29,9 @@ const Carta = () => {
                             aromático.
                         </p>
                         <span className="price">s/ 25</span>
+                        <button type="button" class="btn btn-success">
+                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                        </button>
                     </article>
 
                     <article className="dish">
@@ -39,6 +42,9 @@ const Carta = () => {
                             de sacha culantro.
                         </p>
                         <span className="price">s/ 10</span>
+                        <button type="button" class="btn btn-success">
+                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                        </button>
                     </article>
 
                     <article className="dish">
@@ -51,6 +57,9 @@ const Carta = () => {
                             de sabor suave y muy apreciada por sus propiedades revitalizantes.
                         </p>
                         <span className="price">s/ 20</span>
+                        <button type="button" class="btn btn-success">
+                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                        </button>
                     </article>
 
                     <article className="dish">
@@ -61,6 +70,9 @@ const Carta = () => {
                             hojas de bijao.
                         </p>
                         <span className="price">s/ 20</span>
+                        <button type="button" class="btn btn-success">
+                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                        </button>
                     </article>
 
                     <article className="dish">
@@ -71,6 +83,9 @@ const Carta = () => {
                             sabores frescos y naturales de la selva.
                         </p>
                         <span className="price">s/ 30</span>
+                        <button type="button" class="btn btn-success">
+                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                        </button>
                     </article>
 
                     <article className="dish">
@@ -82,6 +97,9 @@ const Carta = () => {
                             ahumada (cecina).
                         </p>
                         <span className="price">s/ 20</span>
+                        <button type="button" class="btn btn-success">
+                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                        </button>
                     </article>
                 </section>
 
@@ -102,6 +120,9 @@ const Carta = () => {
                             refrescante, tradicional de la Amazonía.
                         </p>
                         <span className="price">s/ 20</span>
+                        <button type="button" class="btn btn-success">
+                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                        </button>
                     </article>
                 </section>
 

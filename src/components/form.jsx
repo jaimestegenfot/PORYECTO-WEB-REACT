@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './../scss/form.scss';
 
+
 const FormComponent = () => {
 
 
@@ -56,10 +57,19 @@ const FormComponent = () => {
     }
   };
 
+  const productos = [
+    "Sudado de pescado",
+    "Inchicapi",
+    "Sopa de carachama",
+    "Juane amazónico",
+    "Patarashca",
+    "Tacacho con cecina",
+  ];
+
   return (
     <div className="container py-5">
       <div className="row justify-content-center">
-        <div className="col-12 col-md-8 col-lg-6 col-xl-6">
+        <div className="col-12 col-md-12 col-lg-12">
           <div className="formulario-container">
             <h2 className="text-center mb-4">Formulario de Pedido</h2>
             <form onSubmit={handleSubmit}>
@@ -106,17 +116,22 @@ const FormComponent = () => {
               </div>
 
               <div className="mb-3">
-                <label htmlFor="productos" className="form-label">Productos</label>
-                <textarea
-                  className="form-control"
-                  id="productos"
-                  name="productos"
-                  value={formData.productos}
-                  onChange={handleChange}
-                  placeholder="Describa los productos de su pedido"
-                  rows="3"
-                  required
-                />
+                  <label htmlFor="productos" className="form-label">Productos</label>
+                  <select
+                    className="form-control"
+                    id="productos"
+                    name="productos"
+                    value={formData.productos}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="">Seleccione un producto</option>
+                    {productos.map((producto, index) => (
+                      <option key={index} value={producto}>
+                        {producto}
+                      </option>
+                    ))}
+                  </select>
               </div>
 
               <div className="row">
