@@ -21,7 +21,7 @@ const Login = () => {
 
   return (
     <Container className="d-flex align-items-center justify-content-center login-container">
-      <Card className="login-card">
+      <Card className="login-card ">
         <Card.Body>
           <h2 className="text-center mb-4">Iniciar Sesión</h2>
           {error && <Alert variant="danger">{error}</Alert>}
@@ -34,6 +34,7 @@ const Login = () => {
                 placeholder="ejemplo@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email"
                 required
               />
             </Form.Group>
@@ -45,6 +46,7 @@ const Login = () => {
                 placeholder="Contraseña"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                autoComplete="current-password"
                 required
               />
             </Form.Group>
