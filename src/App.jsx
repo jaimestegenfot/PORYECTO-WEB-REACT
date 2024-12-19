@@ -15,7 +15,7 @@ import Historia from './view/historia';
 import Crear from './components/crear';
 import ListPedidos from './view/list_pedidos';
 import EditarPedidos from './view/editar_pedidos';
-
+import Carrito from './view/carrito';
 function App() {
   return (
     
@@ -31,6 +31,7 @@ function App() {
         <Route path="/crear" element={<Crear />} />
         <Route path="/pedidos" element={<ListPedidos />} />
         <Route path="/editarpedidos/:id" element={<EditarPedidos />} />
+        <Route path="/carrito" element={<Carrito />} />
         
 
       </Routes>

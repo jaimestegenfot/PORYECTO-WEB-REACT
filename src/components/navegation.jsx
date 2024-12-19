@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import icon from './../img/icon/icon.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Navigation = () => {
   return (
@@ -34,7 +35,9 @@ const Navigation = () => {
             <Link to="/login" className="nav-link" id='login'>
               <FontAwesomeIcon icon={faCircleUser} />
             </Link>
-
+            <Link to="/carrito" className="nav-link">
+              <FaShoppingCart size={30} /> 
+            </Link>
             
           </Nav>
 
