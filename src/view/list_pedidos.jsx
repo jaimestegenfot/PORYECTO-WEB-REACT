@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { getProductos } from "../services/productos"
 import ProductsTable from "../components/table";
 import Swal from 'sweetalert2';
+import '../scss/listpedidos.scss';
 
 const ListView = () => {
     const [productos, setProductos] = useState([]);
