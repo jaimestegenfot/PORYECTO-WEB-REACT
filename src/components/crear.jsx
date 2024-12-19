@@ -3,30 +3,39 @@ import { Container, Form, Button, Card, Alert } from 'react-bootstrap';
 import './../scss/login.scss';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const Crear = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [nombre, setNombre] = useState('');
   const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aquí irá la lógica de autenticación
-    if (!email || !password) {
+    e.preventDefault(); 
+    if (!email || !password || !nombre) {
       setError('Por favor, complete todos los campos');
-      return;
+      return;   
     }
-    // Aquí puedes agregar la lógica de autenticación
-    console.log('Intentando iniciar sesión con:', email, password);
+    console.log('Creando cuenta con:', nombre, email, password); 
   };
 
   return (
     <Container className="d-flex align-items-center justify-content-center login-container">
       <Card className="login-card">
         <Card.Body>
-          <h2 className="text-center mb-4">Iniciar Sesión</h2>
+          <h2 className="text-center mb-4"> Crear Cuenta </h2>
           {error && <Alert variant="danger">{error}</Alert>}
 
           <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3">
+              <Form.Label>Nombre</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Nombre"
+                value={nombre}
+                onChange={(e) => setNombre(e.target.value)}
+                required
+              />
+            </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Correo Electrónico</Form.Label>
               <Form.Control
@@ -50,12 +59,8 @@ const Login = () => {
             </Form.Group>
 
             <Button className="w-100 mb-3" variant="primary" type="submit">
-              Iniciar Sesión
-            </Button>
-
-            <Link to="/crear" className='w-100  btn btn-danger'>
               Crear Cuenta
-            </Link>
+            </Button>
             
           </Form>
         </Card.Body>
@@ -64,4 +69,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Crear;

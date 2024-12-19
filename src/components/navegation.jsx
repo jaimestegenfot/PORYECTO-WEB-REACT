@@ -9,7 +9,7 @@ import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 
 const Navigation = () => {
   return (
-    <Navbar expand="lg" fixed="top" className='Navbar'>
+    <Navbar expand="lg" fixed="top" className='row container Navbar '>
       <Container>
         <Navbar.Brand>
           <img
@@ -30,9 +30,12 @@ const Navigation = () => {
             <Link to="/carta" className="nav-link">Carta</Link>
             <Link to="/promociones" className="nav-link">Promociones</Link>
             <Link to="/pedidos" className="nav-link">Pedidos</Link>
+            <Link to="/list_productos" className="nav-link">Productos</Link>
             <Link to="/login" className="nav-link" id='login'>
               <FontAwesomeIcon icon={faCircleUser} />
             </Link>
+            
+            
           </Nav>
 
         </Navbar.Collapse>

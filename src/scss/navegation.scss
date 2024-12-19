@@ -1,15 +1,32 @@
 .Navbar{
     
+    
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
     background-color: rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     z-index: 100;
     top: 0;
+    .navbar-toggler{
+        background-color: yellow;
+        border-radius: 10px;
+        border: 3px solid #4ea60fc9;
+        .navbar-toggler-icon{
+            color: #1711c2c9;
+            
+        }
+    }
+    
     .Navbar__icono{
         width: 50px;
         height: 50px;
+        margin-left: 30px;
     }
     .Navbar__links{
+        align-items: center;
+        margin: auto;
         .nav-link{
             text-decoration: none;
             color: rgb(194, 195, 158);
@@ -32,9 +49,6 @@
     }
     
     #login{
-        
-        padding: 5px 15px;
-        
         font-size: 30px;
     }
 }
