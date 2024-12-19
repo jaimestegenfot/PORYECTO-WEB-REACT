@@ -20,8 +20,8 @@ const Login = () => {
   };
 
   return (
-    <Container className="d-flex align-items-center justify-content-center login-container">
-      <Card className="login-card ">
+    <Container className="container d-flex align-items-center justify-content-center login-container">
+      <Card className="login-card col-12 col-md-5 col-lg-5 col-xl-5">
         <Card.Body>
           <h2 className="text-center mb-4">Iniciar Sesión</h2>
           {error && <Alert variant="danger">{error}</Alert>}

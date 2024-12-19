@@ -1,4 +1,6 @@
-.container {
+#list-pedidos {
+    margin: auto;
+    
     #lista {
         text-align: center;
         margin-bottom: 20px;
@@ -11,14 +13,25 @@
     .table-responsive {
         overflow-x: auto;
         border-radius: 20px;
+        background: greenyellow;
+        padding: 10px;
         
-
         .table {
             width: 100%;
             max-width: 1200px;
-            margin: 0 auto;
+            min-width: 100%;
             border-collapse: collapse;
             border-spacing: 0;
+            white-space: nowrap;
+            font-size: 14px;
+            
+            @media (max-width: 768px) {
+                font-size: 12px;
+                
+                th, td {
+                    padding: 8px 5px;
+                }
+            }
             
             border: 1px solid #070707;
 

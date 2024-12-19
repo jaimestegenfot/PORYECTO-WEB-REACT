@@ -59,7 +59,7 @@ const FormComponent = () => {
   return (
     <div className="container py-5">
       <div className="row justify-content-center">
-        <div className="col-12 col-md-12 col-lg-12">
+        <div className="col-12 col-md-8 col-lg-6 col-xl-6">
           <div className="formulario-container">
             <h2 className="text-center mb-4">Formulario de Pedido</h2>
             <form onSubmit={handleSubmit}>
