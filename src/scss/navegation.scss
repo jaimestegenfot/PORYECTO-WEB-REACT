@@ -1,0 +1,37 @@
+.Navbar{
+    
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    .Navbar__icono{
+        width: 50px;
+        height: 50px;
+    }
+    .Navbar__links{
+        a{
+            text-decoration: none;
+            color: rgb(194, 195, 158);
+            font-size: 20px;
+            font-family: "Gabriela", serif;
+            font-weight: 400;
+            font-style: normal;
+            margin: 1px;
+            padding: 5px 15px;
+            background-image: linear-gradient(transparent 0%, transparent 90%, #12aa77c9 90%, #12aa77c9 100%);
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            background-position: right;
+            transition: background-size 300ms;
+        }
+    }
+    .Navbar__links a:hover{
+        background-size: 100% 100%;
+        background-position: left;
+    }
+    .Navbar__links a:active{
+        background-size: 100% 100%;
+        background-position: left;
+    }
+}
