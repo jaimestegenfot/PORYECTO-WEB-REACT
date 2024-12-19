@@ -29,7 +29,7 @@ const Promociones = () => {
                         </p>
                         <span className="price">s/ 36</span>
                         <button type="button" class="btn btn-success">
-                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                            <i className="bi bi-cart-plus"></i> Añadir al carrito
                         </button>
                     </article>
 
@@ -43,7 +43,7 @@ const Promociones = () => {
                         </p>
                         <span className="price">s/ 52.50</span>
                         <button type="button" class="btn btn-success">
-                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                            <i className="bi bi-cart-plus"></i> Añadir al carrito
                         </button>
                     </article>
 
@@ -57,7 +57,7 @@ const Promociones = () => {
                         </p>
                         <span className="price">s/ 64</span>
                         <button type="button" class="btn btn-success">
-                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                            <i className="bi bi-cart-plus"></i> Añadir al carrito
                         </button>
                     </article>
                 </section>
@@ -80,7 +80,7 @@ const Promociones = () => {
                         </p>
                         <span className="price">s/ 85</span>
                         <button type="button" class="btn btn-success">
-                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                            <i className="bi bi-cart-plus"></i> Añadir al carrito
                         </button>
                     </article>
                 </section>
