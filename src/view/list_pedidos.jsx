@@ -42,7 +42,7 @@ const ListView = () => {
 
     return (
         <div className="container mt-5">
-            <h2 className="text-center mb-4">Lista de Pedidos</h2>
+            <h2  id="lista" className="text-center mb-4">Lista de Pedidos</h2>
             <div className="table-responsive">
                 <ProductsTable 
                     productos={productos} 
