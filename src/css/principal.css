@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubbler+One&family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/*#principal{
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("./../img/img_comidas/RB57FSLJFBFIRGTSLQRHI67PD4.png");
+    background-size: cover;
+    background-position: center center;
+    
+    margin-top: -32px;
+    margin-bottom: -32px;
+    margin-left: -160px;
+    margin-right: -151.5px; 
+    
+}*/
+
+.contenedor i{
+  width: 50px;
+}
+
+
+#principal .contenedor header{
+    background-color: rgba(0, 0, 0, .1);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    
+}
+
+#principal .contenedor header div a img{
+   width: 100px;
+   height: auto;
+}
+
+#principal .contenedor header .contenido{
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 100px;
+}
+
+#principal .contenedor header .contenido nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+#principal .contenedor header .contenido nav ul li a{
+    text-decoration: none;
+    color: rgb(194, 195, 158);
+    font-size: 20px;
+    font-family: "Gabriela", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 1px;
+    padding: 5px 15px;
+    background-image: linear-gradient(transparent 0%, transparent 90%, #12aa77c9 90%, #12aa77c9 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: right;
+    transition: background-size 300ms;
+}
+#principal .contenedor header .contenido nav ul a:hover{
+    background-size: 100% 100%;
+    background-position: left;
+}
+
+#principal .contenedor .registro{
+  display: flex;
+  align-items: center;
+  
+}
+
+#principal .contenedor .registros  a {
+    font-size: 20px;
+    color: rgb(194, 195, 158);
+}
+#principal .contenedor .cuerpo h1{  
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Lemon", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#principal .contenedor .cuerpo span{
+    cursor: pointer;
+    background: linear-gradient(90deg, rgb(20, 196, 58), rgb(232, 232, 9), rgb(206, 24, 54));
+    background-clip: text;
+    color: transparent;
+}
+
+#principal .contenedor .cuerpo{
+    max-width: 1100px;
+    height: 100vh;
+    margin: auto;
+    color: #f4f7f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+#principal .contenedor .cuerpo p{
+    max-width: 450px;
+    margin: 15px;
+    font-size: 20px;
+    font-family: "Bubbler One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#principal .contenedor .cuerpo a {
+    padding: 10px 20px;
+    border: solid 1px #fff;
+    text-decoration: none;
+    color: white;
+    background-color: #26b424;
+    border-radius: 1rem;
+    font-family: "Bubbler One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#principal .contenedor .cuerpo a:hover{
+    background-color: #24a021;
+}
+
+/*HISTORIA*/
+.history {
+  background-color: #969737;
+  height: 60vh;
+  margin-top: 100px;
+}
+
+.content {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  
+  
+}
+
+.content .text {
+
+  flex: 1;
+  text-align: center;
+  margin: auto;
+  margin-left: 40px;
+  
+}
+
+.content .text p {
+  margin-top: 40px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  font-family: "Bubbler One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+.content .image {
+  flex: 1;
+  
+}
+
+.content .image img {
+  margin-top: 100px;
+  max-width: 50%;
+  margin-top: 10px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 9);
+}
+/*CONTACTO*/
+#contact {
+  padding: 100px 15px;
+}
+
+#contact .form{
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 150px;
+}
+
+#contact .form .fila{
+  margin-bottom: 15px;
+}
+
+
+#contact .form .mitad{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+#contact .form input, #contact .form textarea {
+  padding: 20px;
+  border-radius: 1rem;
+  border: none;
+  border: 1px solid #919191;  
+}
+
+#contact .form .mitad input{
+  background-color: #b8c5ab;
+  width: 48%;
+}
+
+#contact .form .input-full{
+  background-color: #b8c5ab;
+  width: 100%;
+}
+
+#contact .enviar{
+ display: flex;
+  margin: auto;
+  cursor: pointer;
+  transition: .5s;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #1c1d1b;
+  color: #fff;
+}
+
+#contact .enviar:hover{
+  background-color: #00FA9A;
+  color: #fff;
+  font-size:  20px;
+}
+
+/*CARTA*/
+#baner{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #067706;
+  color: white;
+  padding: 20px;
+  font-family: "Bubbler One", sans-serif;
+  align-items: center;
+  box-shadow: 0 5px 50px rgb(0, 0, 0.7);
+  margin-bottom: 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius:10px ;
+  margin: auto;
+}
+
+#baner img{
+  height: auto;
+  width: 70px;
+  margin-right: 80px;
+}
+
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin:auto;
+}
+.title{
+  max-width: 1200px;
+  margin: auto;
+}
+.titulo h3{
+  display: flex;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  color: rgb(199, 135, 8);
+  font-size: 50px;
+  margin-left: 50px;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+.dish {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.dish img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.dish h2 {
+  color: #5f8837;
+  margin-top: 10px;
+}
+
+.dish p {
+  color: #0e0101;
+}
+
+.price {
+  display: block;
+  margin-top: 10px;
+  font-size: 30px;
+  color: #2e8b57;
+  font-weight: bold;
+}
+#whatsapp{
+  font-size: 80px;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1000;
+}
+#whatsapp .clit{
+  color: rgb(62, 205, 19);
+}
