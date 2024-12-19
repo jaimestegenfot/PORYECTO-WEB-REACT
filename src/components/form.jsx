@@ -3,7 +3,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import Swal from "sweetalert2";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './../css/form.css';
+import './../scss/form.scss';
 
 const FormComponent = () => {
 
@@ -152,6 +152,9 @@ const FormComponent = () => {
               </div>
 
               <button type="submit" className="btn btn-primary w-100 mt-3" >
+                Enviar Pedido
+              </button>
+              <button type="button" className="btn btn-danger w-100 mt-3" >
                 Enviar Pedido
               </button>
               
