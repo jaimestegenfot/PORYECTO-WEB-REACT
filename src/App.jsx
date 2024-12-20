@@ -4,27 +4,34 @@ import Inicio from './view/inicio';
 import Historia from './view/historia';
 import Login from './view/login';
 import Crear from './components/crear';
-import Dashboard from './view/dashboard';
-import Carta from './view/carta';
 import EditarPedidos from './view/editar_pedidos';
 import ListPedidos from './view/list_pedidos';
 import FormComponent from './components/form';
+import Dashboard from './page/dasboard';
+import Carta from './view/carta';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <Router>
-      <Navegation />
-      <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/historia" element={<Historia />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/crear" element={<Crear />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/carta" element={<Carta />} />
-        <Route path="/listapedidos" element={<ListPedidos />} />
-        <Route path="/editarpedidos/:id" element={<EditarPedidos />} />
-        <Route path="/form" element={<FormComponent />} />
-      </Routes>
+      <div className="app-wrapper">
+        <Navegation />
+        <div className="content-container">
+          <Routes>
+            <Route path="/" element={<FormComponent />} />
+            <Route path="/inicio" element={<Inicio />} />
+            <Route path="/historia" element={<Historia />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/carta" element={<Carta />} />
+            <Route path="/crear" element={<Crear />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/pedidos" element={<ListPedidos />} />
+            <Route path="/editarpedidos/:id" element={<EditarPedidos />} />
+            
+          </Routes>
+        </div>
+      </div>
     </Router>
   );
 }

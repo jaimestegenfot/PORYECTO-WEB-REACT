@@ -15,9 +15,6 @@ const Promociones = () => {
                         <h3>Platos típicos</h3>
                     </section>
                 </div>
-
-
-
                 <section className="menu">
                     <article className="dish">
                         <img src={promo1} alt="Plato 1" />
@@ -61,15 +58,11 @@ const Promociones = () => {
                         </button>
                     </article>
                 </section>
-
-
                 <div className="title">
                     <section className="titulo">
                         <h3>Bebidas</h3>
                     </section>
                 </div>
-
-
                 <section className="menu">
                     <article className="dish">
                         <img src={bebida1} alt="Bebida 1" />

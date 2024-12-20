@@ -1,0 +1,31 @@
+.sidebar-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: auto;
+    width: 250px;
+  }
+  
+  .sidebar-title {
+    color: #ff4b4b;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+  .sidebar-link {
+    color: #666;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #ff4b4b;
+    }
+  }
+  
+  // Estilo activo para el link actual
+  .sidebar-link.active {
+    color: #ff4b4b;
+    font-weight: bold;
+  }

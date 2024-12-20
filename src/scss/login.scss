@@ -1,28 +1,32 @@
 #root {
-    
+
+    .login-container {
 
 
+        .login-card {
 
-.login-container {
-   
+            min-width: 330px;
+            max-width: 1200px;
+            border-radius: 30px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-    .login-card {
+            input:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 0 0.2rem rgba(35, 199, 2, 0.25);
+            }
 
-        min-width: 330px;
         
-        max-width: 1200px;
-        border-radius: 30px;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
 
-    .btn-primary {
-        background-color: #007bff;
-    }
+        }
 
-    .btn-danger {
-        background-color: #dc3545;
+        .btn-primary {
+            background-color: #007bff;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+        }
     }
-}
 
 }

@@ -1,6 +1,4 @@
 /* eslint-disable react/prop-types */
-
-import ColorCircle from "./colorcircle";
 import {  Link } from "react-router-dom"
 import Swal from "sweetalert2";
 import { eliminarProducto } from "../services/productos";

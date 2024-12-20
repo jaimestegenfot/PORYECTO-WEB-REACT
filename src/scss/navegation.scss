@@ -51,4 +51,55 @@
     #login{
         font-size: 30px;
     }
+
+    .position-relative {
+        .nav-link {
+            color: #333;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #0d6efd;
+            }
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.25em 0.6em;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+// Estilos para el modal del carrito
+.carrito-modal {
+    .modal-content {
+        border-radius: 10px;
+        
+        .modal-header {
+            border-bottom: 1px solid #dee2e6;
+            background-color: #f8f9fa;
+            
+            .modal-title {
+                font-weight: 600;
+            }
+        }
+        
+        .modal-body {
+            max-height: 60vh;
+            overflow-y: auto;
+            
+            .list-group-item {
+                transition: background-color 0.2s;
+                
+                &:hover {
+                    background-color: #f8f9fa;
+                }
+            }
+        }
+        
+        .modal-footer {
+            border-top: 1px solid #dee2e6;
+            background-color: #f8f9fa;
+        }
+    }
 }

@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("./../img/img_comidas/RB57FSLJFBFIRGTSLQRHI67PD4.png");
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./../img/img_comidas/RB57FSLJFBFIRGTSLQRHI67PD4.png");
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -12,7 +12,7 @@ body {
         max-width: 100%;
         min-width: 330px;
         width: 100%;
-      margin: auto;
+        margin: auto;
         padding: 2.5rem;
         background: rgba(255, 255, 255, 0.95);
         border-radius: 20px;
@@ -161,10 +161,18 @@ body {
 
     }
 
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        border: 1px solid #070707;
 
+        @media (max-width: 768px) {
+            font-size: 12px;
 
-
-
-
+            th, td {
+                padding: 8px 5px;
+            }
+        }
+    }
 
 }

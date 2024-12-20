@@ -1,22 +1,86 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Container, Form, Button, Card, Alert } from 'react-bootstrap';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import { db } from "../config/firebase";
+import Swal from "sweetalert2";
 import './../scss/login.scss';
-import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
+    if (user && user.rol) {
+      // Redirigir según el rol
+      if (user.rol === "admin") {
+        navigate('/dashboard');
+      } else {
+        navigate('/home');
+      }
+    }
+  }, [navigate]);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aquí irá la lógica de autenticación
     if (!email || !password) {
       setError('Por favor, complete todos los campos');
       return;
     }
-    // Aquí puedes agregar la lógica de autenticación
-    console.log('Intentando iniciar sesión con:', email, password);
+
+    try {
+      setLoading(true);
+      setError('');
+
+      const usuariosRef = collection(db, 'usuarios');
+      const q = query(
+        usuariosRef, 
+        where("gmail", "==", email),
+        where("password", "==", password)
+      );
+      
+      const querySnapshot = await getDocs(q);
+
+      if (querySnapshot.empty) {
+        Swal.fire("Error", "Correo o contraseña incorrectos", "error");
+        return;
+      }
+
+      // Usuario encontrado
+      const userData = querySnapshot.docs[0].data();
+      
+      if (userData.estado !== "activo") {
+        Swal.fire("Error", "Esta cuenta está desactivada", "error");
+        return;
+      }
+
+      // Login exitoso
+      Swal.fire({
+        icon: 'success',
+        title: '¡Bienvenido!',
+        text: `Hola ${userData.nombre}`,
+        timer: 2000,
+        showConfirmButton: false
+      }).then(() => {
+        localStorage.setItem('user', JSON.stringify(userData));
+        // Redirigir según el rol después del login
+        if (userData.rol === "admin") {
+          navigate('/dashboard');
+        } else {
+          navigate('/home');
+        }
+      });
+
+    } catch (error) {
+      console.error("Error:", error);
+      setError('Error al iniciar sesión: ' + error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -51,14 +115,18 @@ const Login = () => {
               />
             </Form.Group>
 
-            <Button className="w-100 mb-3" variant="primary" type="submit">
-              Iniciar Sesión
+            <Button 
+              className="w-100 mb-3" 
+              variant="primary" 
+              type="submit"
+              disabled={loading}
+            >
+              {loading ? 'Iniciando sesión...' : 'Iniciar Sesión'}
             </Button>
 
-            <Link to="/crear" className='w-100  btn btn-danger'>
+            <Link to="/crear" className='w-100 btn btn-danger'>
               Crear Cuenta
             </Link>
-            
           </Form>
         </Card.Body>
       </Card>

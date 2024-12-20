@@ -24,7 +24,7 @@
             border-spacing: 0;
             white-space: nowrap;
             font-size: 14px;
-            
+            border: 1px solid #070707;
             @media (max-width: 768px) {
                 font-size: 12px;
                 
@@ -33,7 +33,7 @@
                 }
             }
             
-            border: 1px solid #070707;
+            
 
 
             thead {
