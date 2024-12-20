@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Container, Form, Button, Card, Alert } from 'react-bootstrap';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from "../config/firebase";
+//import { db } from '../config/firebase';
 import Swal from "sweetalert2";
 import './../scss/login.scss';
 

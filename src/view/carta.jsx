@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import { FaShoppingCart } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../scss/carta.scss';
+import { useNavigate } from 'react-router-dom';
 
 const Carta = () => {
     const [platos, setPlatos] = useState([]);
@@ -13,6 +14,7 @@ const Carta = () => {
     const [error, setError] = useState(null);
     const [showCart, setShowCart] = useState(false);
     const [carrito, setCarrito] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const obtenerPlatos = async () => {
@@ -33,12 +35,13 @@ const Carta = () => {
         };
 
         obtenerPlatos();
-        // Cargar carrito del localStorage
         const carritoGuardado = JSON.parse(localStorage.getItem('carrito')) || [];
         setCarrito(carritoGuardado);
     }, []);
 
     const handleAddToCart = (plato) => {
+
+
         const carritoActual = [...carrito];
         const platoEnCarrito = carritoActual.find(item => item.id === plato.id);
         
@@ -84,6 +87,37 @@ const Carta = () => {
 
     const calcularTotal = () => {
         return carrito.reduce((total, item) => total + (item.precio * item.cantidad), 0);
+    };
+
+    const handleProcederPago = () => {
+        const userData = JSON.parse(localStorage.getItem('user'));
+        if (!userData) {
+            Swal.fire({
+                title: 'Inicia sesión',
+                text: 'Necesitas iniciar sesión para proceder al pago',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ir a login',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/login');
+                }
+            });
+            return;
+        }
+
+        localStorage.setItem('carritoParaPago', JSON.stringify(carrito));
+        
+        Swal.fire({
+            title: '¡Genial!',
+            text: 'Te dirigiremos al formulario de pedido',
+            icon: 'success',
+            showConfirmButton: false,
+            timer: 1500
+        }).then(() => {
+            navigate('/pago');
+        });
     };
 
     if (loading) {
@@ -165,7 +199,12 @@ const Carta = () => {
                             ))}
                             <div className="cart-total">
                                 <h4>Total: S/. {calcularTotal().toFixed(2)}</h4>
-                                <Button variant="success" className="w-100">
+                                <Button 
+                                    variant="success" 
+                                    className="w-100"
+                                    onClick={handleProcederPago}
+                                    disabled={carrito.length === 0}
+                                >
                                     Proceder al pago
                                 </Button>
                             </div>

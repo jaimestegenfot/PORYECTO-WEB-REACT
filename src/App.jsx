@@ -6,10 +6,10 @@ import Login from './view/login';
 import Crear from './components/crear';
 import EditarPedidos from './view/editar_pedidos';
 import ListPedidos from './view/list_pedidos';
-import FormComponent from './components/form';
+import Pago from './components/pago';
 import Dashboard from './page/dasboard';
 import Carta from './view/carta';
-
+import Home from './page/home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -19,7 +19,8 @@ function App() {
         <Navegation />
         <div className="content-container">
           <Routes>
-            <Route path="/" element={<FormComponent />} />
+            <Route path="/" element={<Inicio />} />
+           
             <Route path="/inicio" element={<Inicio />} />
             <Route path="/historia" element={<Historia />} />
             <Route path="/login" element={<Login />} />
@@ -28,7 +29,8 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/pedidos" element={<ListPedidos />} />
             <Route path="/editarpedidos/:id" element={<EditarPedidos />} />
-            
+            <Route path="/home" element={<Home />} />
+            <Route path="/pago" element={<Pago />} />
           </Routes>
         </div>
       </div>

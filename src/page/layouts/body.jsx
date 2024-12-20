@@ -3,6 +3,10 @@ import { Modal, Button, Form } from 'react-bootstrap';
 import { collection, addDoc, getDocs, doc, deleteDoc, updateDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { db, storage } from '../../config/firebase';
+//import { db, storage } from '../../config/firebase';
+//import { storage, uploadFile } from '../../config/firebase';
+
+
 import Swal from 'sweetalert2';
 
 

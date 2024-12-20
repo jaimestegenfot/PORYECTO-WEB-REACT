@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Form, Button, Card, Alert } from 'react-bootstrap';
 import { collection, addDoc, getDocs, query, where } from 'firebase/firestore';
-import { db } from "../config/firebase";
+//import { db } from "../config/firebase";
 import Swal from "sweetalert2";
 
 import { useNavigate } from 'react-router-dom';

@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-catch */
 import axios from "axios";
 import { collection, getDocs, doc, getDoc } from 'firebase/firestore';
-import { db } from '../config/firebase';
+//import { db } from '../config/firebase';
 
 const URL = import.meta.env.VITE_ENDPOINT_BASE;
 const getProductos = async () => {

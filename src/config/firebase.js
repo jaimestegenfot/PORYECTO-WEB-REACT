@@ -3,8 +3,6 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection } from '@firebase/firestore';
 import { getStorage } from "firebase/storage";
         
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -23,7 +21,7 @@ const db = getFirestore(app);
 const storage = getStorage(app);
 
 // Referencia a la colección "cocona"
-const coconaCollection = collection(db, 'cocona');
+const coconaCollection = collection(db, 'pedidos');
 
 console.log('Firebase inicializado:', app);
 console.log('Firestore inicializado:', db);

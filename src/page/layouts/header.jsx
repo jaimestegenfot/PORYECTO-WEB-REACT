@@ -6,11 +6,13 @@ const Header = () => {
     
     return (
         
-        <div className="header-container row">
+        <div className="header-container row mt-5">
             {/* Header principal */}
             <div className="dashboard-header col-md-12">
                 <h1>Panel de Administración</h1>
                 <div className="user-info">
+                    
+
                     <span>{userData.nombre || 'Usuario'}</span>
 
                     <i className="fa-solid fa-circle-user"></i>
