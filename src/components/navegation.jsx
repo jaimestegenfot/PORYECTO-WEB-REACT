@@ -30,7 +30,7 @@ const Navigation = () => {
             
             <Link to="/inicio" className="nav-link">Inicio</Link>
             <Link to="/historia" className="nav-link">Historia</Link>
-            <Link to="/pedidos" className="nav-link">Pedidos</Link>
+            
             <Link to="/carta" className="nav-link">Carta</Link>
             <Link to="/login" className="nav-link" id='login'>
               <FontAwesomeIcon icon={faCircleUser} />

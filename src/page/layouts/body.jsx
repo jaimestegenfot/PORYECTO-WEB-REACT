@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { collection, addDoc, getDocs, doc, deleteDoc, updateDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { db, storage } from '../../config/firebase';
+import { Link } from 'react-router-dom';
 //import { db, storage } from '../../config/firebase';
 //import { storage, uploadFile } from '../../config/firebase';
 
@@ -11,7 +13,7 @@ import Swal from 'sweetalert2';
 
 
 const Body = () => {
-
+    const navigate = useNavigate();
     const [showModal, setShowModal] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
     const [selectedProductId, setSelectedProductId] = useState(null);
@@ -162,6 +164,10 @@ const Body = () => {
 
     const handleShow = () => setShowModal(true);
 
+    const lista_pedidos = () => {
+        navigate('/pedidos');
+    };
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setProducto(prevState => ({
@@ -204,6 +210,7 @@ const Body = () => {
             setLoading(false);
         }
     };
+    
 
     // Cargar productos al montar el componente
     useEffect(() => {
@@ -216,6 +223,9 @@ const Body = () => {
                 <div className="products-section">
                     <div className="section-header">
                         <h2>Gestión de Productos</h2>
+                        <button className="btn-add" onClick={lista_pedidos}>
+                            ver pedidos
+                        </button>
                         <button className="btn-add" onClick={handleShow}>
                             Añadir Producto
                         </button>
