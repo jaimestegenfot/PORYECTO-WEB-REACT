@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import icon from './../img/icon/icon.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import { FaShoppingCart } from 'react-icons/fa';
 
 
 const Navigation = () => {
@@ -22,24 +23,25 @@ const Navigation = () => {
 
           />
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto Navbar__links">
             <Link to="/" className="nav-link">Formulario</Link>
             <Link to="/inicio" className="nav-link">Inicio</Link>
             <Link to="/historia" className="nav-link">Historia</Link>
-            <Link to="/carta" className="nav-link">Carta</Link>
-            <Link to="/promociones" className="nav-link">Promociones</Link>
             <Link to="/pedidos" className="nav-link">Pedidos</Link>
+            <Link to="/carta" className="nav-link">Carta</Link>
             <Link to="/login" className="nav-link" id='login'>
               <FontAwesomeIcon icon={faCircleUser} />
             </Link>
-            <Link to="/dashboard" className="nav-link" id='dashboard'>dasboard</Link>
 
             
           </Nav>
 
+
         </Navbar.Collapse>
+        
       </Container>
     </Navbar>
   );

@@ -43,7 +43,7 @@ const Promociones = () => {
                         </p>
                         <span className="price">s/ 52.50</span>
                         <button type="button" className="btn btn-success">
-                                <i className="bi bi-cart-plus"></i> Añadir al carrito
+                            <i className="bi bi-cart-plus"></i> Añadir al carrito
                         </button>
                     </article>
 
