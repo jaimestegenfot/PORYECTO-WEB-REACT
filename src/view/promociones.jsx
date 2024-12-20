@@ -28,8 +28,8 @@ const Promociones = () => {
                             aromático.
                         </p>
                         <span className="price">s/ 36</span>
-                        <button type="button" class="btn btn-success">
-                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                        <button type="button" className="btn btn-success">
+                            <i className="bi bi-cart-plus"></i> Añadir al carrito
                         </button>
                     </article>
 
@@ -42,8 +42,8 @@ const Promociones = () => {
                             aromático.
                         </p>
                         <span className="price">s/ 52.50</span>
-                        <button type="button" class="btn btn-success">
-                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                        <button type="button" className="btn btn-success">
+                                <i className="bi bi-cart-plus"></i> Añadir al carrito
                         </button>
                     </article>
 
@@ -56,8 +56,8 @@ const Promociones = () => {
                             ahumada (cecina).
                         </p>
                         <span className="price">s/ 64</span>
-                        <button type="button" class="btn btn-success">
-                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                        <button type="button" className="btn btn-success">
+                            <i className="bi bi-cart-plus"></i> Añadir al carrito
                         </button>
                     </article>
                 </section>
@@ -79,8 +79,8 @@ const Promociones = () => {
                             refrescante, tradicional de la Amazonía.
                         </p>
                         <span className="price">s/ 85</span>
-                        <button type="button" class="btn btn-success">
-                            <i class="bi bi-cart-plus"></i> Añadir al carrito
+                        <button type="button" className="btn btn-success">
+                            <i className="bi bi-cart-plus"></i> Añadir al carrito
                         </button>
                     </article>
                 </section>

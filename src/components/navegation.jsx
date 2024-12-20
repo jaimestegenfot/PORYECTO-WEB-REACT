@@ -7,6 +7,7 @@ import icon from './../img/icon/icon.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 
+
 const Navigation = () => {
   return (
     <Navbar expand="lg" fixed="top" className='row container Navbar '>
@@ -30,10 +31,10 @@ const Navigation = () => {
             <Link to="/carta" className="nav-link">Carta</Link>
             <Link to="/promociones" className="nav-link">Promociones</Link>
             <Link to="/pedidos" className="nav-link">Pedidos</Link>
-            
             <Link to="/login" className="nav-link" id='login'>
               <FontAwesomeIcon icon={faCircleUser} />
             </Link>
+            <Link to="/dashboard" className="nav-link" id='dashboard'>dasboard</Link>
 
             
           </Nav>
